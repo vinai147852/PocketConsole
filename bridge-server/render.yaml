@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: bridge-server
+    runtime: node
+    plan: free
+    rootDir: bridge-server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: BRIDGE_API_KEY
+        generateValue: true
+      - key: ALLOWED_ORIGIN
+        value: "*"
+      - key: TASK_TTL_MS
+        value: "3600000"

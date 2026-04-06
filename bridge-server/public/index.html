@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bridge Server</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e2e8f0;
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .card {
+      width: min(680px, 100%);
+      background: rgba(15, 23, 42, 0.86);
+      border: 1px solid rgba(148, 163, 184, 0.24);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.45);
+    }
+    h1 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 28px;
+    }
+    p {
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    code {
+      color: #93c5fd;
+      font-family: Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Bridge Server Online</h1>
+    <p>This Render-ready relay accepts tasks over HTTP or WebSocket and forwards them to connected local agents.</p>
+    <p>Health check: <code>/health</code></p>
+    <p>WebSocket endpoint: <code>/ws</code></p>
+    <p>Task API: <code>POST /api/tasks</code>, <code>GET /api/tasks/:taskId</code>, <code>GET /api/agents</code></p>
+  </div>
+</body>
+</html>
